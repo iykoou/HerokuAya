@@ -135,17 +135,15 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = "Hey there! My name is Haruka Aya - I'm here to help you manage your groups!\n\
+    text = "Hey there! My name is Endorsi Zahard - I'm here to help you manage your groups!\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
 
-    text += "Join [Faq Group](https://t.me/zainstechchat) ( @zainstechchat ) if you need any support or help\n\n\
-Follow [Zains Projects](https://t.me/zainsprojects) ( @ZainsProjects ) if you want to keep up with the news, updates and bot downtime!\n\n\
-\n\nWant to add me to your group? [Click here!](t.me/HarukaAyaBot?startgroup=true)"
+    text += "Created by @katarina_claes
+\n\nWant to add me to your group? [Click here!](t.me/EndorsiBot?startgroup=true)"
 
-    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/HarukaAyaGroup")]]
+    keyboard = [[InlineKeyboardButton(text="📢 Contact Creator", url="https://t.me/katarina_claes")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
-        InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
+    keyboard += [[InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
@@ -179,7 +177,7 @@ def control_panel(bot, update):
         back_match = re.match(r"help_back", query.data)
 
     else:
-        M_match = "Haruka Aya is best bot" #LMAO, don't uncomment
+        M_match = "Endorsi Zahard is here" #LMAO, don't uncomment
 
     if M_match:
         text = "*Control panel* 🛠"
